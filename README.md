@@ -9,7 +9,7 @@ This repository shows a **basic migration** from a Jenkins pipeline to GitHub Ac
 - Dependency caching
 
 ## Scope
-This example is  intentionally simple and represents the kind of
+This example is intentionally simple and represents the kind of
 CI pipelines commonly migrated from Jenkins to GitHub Actions
 (1–3 jobs, CI only).
 
