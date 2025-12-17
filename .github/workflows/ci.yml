@@ -6,18 +6,28 @@ on:
   pull_request:
 
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
+
+    env:
+      APP_NAME: jenkins-to-github-actions
+      ENVIRONMENT: dev
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup build environment
-        run: echo "Setting up build environment"
+      - name: Validate inputs and repo structure
+        run: |
+          chmod +x scripts/ValidateInputs.groovy
+          groovy scripts/ValidateInputs.groovy
 
       - name: Build
-        run: echo "Running build step (simulated)"
+        run: |
+          chmod +x scripts/build.sh
+          scripts/build.sh
 
       - name: Test
-        run: echo "Running test step (simulated)"
+        run: |
+          chmod +x scripts/test.sh
+          scripts/test.sh
