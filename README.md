@@ -1,6 +1,10 @@
 # Jenkins to GitHub Actions – Simple Migration Example
 
-This repository shows a **basic migration** from a Jenkins pipeline to GitHub Actions.
+## Purpose
+This repository demonstrates how to migrate a classic Jenkins pipeline
+(validation, build, test) into GitHub Actions using Groovy and shell scripts.
+
+It is intended as a reference for CI/CD modernization.
 
 ## What’s included
 - Jenkinsfile example
