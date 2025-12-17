@@ -17,4 +17,4 @@ CI pipelines commonly migrated from Jenkins to GitHub Actions
 I help teams migrate **legacy Jenkins pipelines to GitHub Actions**
 through small, well-defined changes.
 
-📧 Contact: jorge_ferrero_85@hotmail.com
+📧 Contact: ferrero_jorge_85@hotmail.com
