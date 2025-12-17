@@ -14,20 +14,24 @@ jobs:
       ENVIRONMENT: dev
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-        - name: Set up Java
-          uses: actions/setup-java@v4
-          with:
-            distribution: 'temurin'
-            java-version: '17'
-     
-     - name: Install Groovy
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Install Groovy
         run: |
           sudo apt-get update
           sudo apt-get install -y groovy
-          
-      - name: Checkout code
-        uses: actions/checkout@v4
+
+      - name: Check Groovy installation
+        run: |
+          which groovy
+          groovy --version
 
       - name: Validate inputs and repo structure
         run: |
